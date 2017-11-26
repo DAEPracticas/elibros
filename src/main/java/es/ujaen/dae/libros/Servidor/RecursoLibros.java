@@ -35,10 +35,10 @@ public class RecursoLibros {
         ed1.setToken("1134f434tvrvsgfdt34-E");
         editDAO.insertar(ed1);*/
 
-        Libro l1 = new Libro("978-6754", "Aventuras", "Libro1",
+       /* Libro l1 = new Libro("978-6754", "Aventuras", "Libro1",
                 "23/2/2013", "revisonContenido", "Texto vacío");
 
-        libDAO.insertar(l1);
+        libDAO.insertar(l1);*/
 
     }
 
