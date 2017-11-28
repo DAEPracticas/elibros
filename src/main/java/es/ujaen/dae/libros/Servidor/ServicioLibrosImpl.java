@@ -138,14 +138,14 @@ public class ServicioLibrosImpl implements ServicioLibros {
             while (revisoresAsignados != 3) {
                 Revisor revMasAntiguo = revDAO.getRevAsignacionMasAntigua();
                 if (revMasAntiguo.getLibrosPendientes().size() < revMasAntiguo.getCarga()) {
-                    librosParaRevision1.agregarRevisor(revMasAntiguo);
+                    //librosParaRevision1.agregarRevisor(revMasAntiguo);
                     revMasAntiguo.asignarLibro(librosParaRevision1);
                     revMasAntiguo.setFecha(Calendar.getInstance());
                     revMasAntiguo.setCarga(revMasAntiguo.getCarga() + 1);
                     librosParaRevision1.setEstado("enRevision");
-                    libDAO.eliminar(librosParaRevision1);
-                    libDAO.insertar(librosParaRevision1);
-                    //libDAO.actualizar(librosParaRevision1);
+                    //libDAO.eliminar(librosParaRevision1);
+                    //libDAO.insertar(librosParaRevision1);
+                    libDAO.actualizar(librosParaRevision1);
                     revDAO.actualizar(revMasAntiguo);
                     revisoresAsignados++;
                 } else {
@@ -190,11 +190,11 @@ public class ServicioLibrosImpl implements ServicioLibros {
     }
 
     private void desasignarRevisores(Libro l) {
-        for (int i = 0; i <= l.getRevisoresAsignados().size(); i++) {
-            Revisor r = l.getRevisoresAsignados().get(i);
-            r.getLibrosPendientes().remove(l);
-            revDAO.actualizar(r);
-        }
+//        for (int i = 0; i <= l.getRevisoresAsignados().size(); i++) {
+//            Revisor r = l.getRevisoresAsignados().get(i);
+//            r.getLibrosPendientes().remove(l);
+//            revDAO.actualizar(r);
+//        }
     }
 
     @Override
@@ -243,7 +243,7 @@ public class ServicioLibrosImpl implements ServicioLibros {
                 //Desasignamos el libros a los revisores que tenia
                 desasignarRevisores(l);
                 //Borramos los revisores del libro
-                l.getRevisoresAsignados().clear();
+                //l.getRevisoresAsignados().clear();
                 //Actualiza en BD
                 libDAO.actualizar(l);
                 return -2;
@@ -259,7 +259,7 @@ public class ServicioLibrosImpl implements ServicioLibros {
                 //Desasignamos el libros a los revisores que tenia
                 desasignarRevisores(l);
                 //Borramos los revisores del libro
-                l.getRevisoresAsignados().clear();
+//                l.getRevisoresAsignados().clear();
                 //Actualiza en BD
                 libDAO.actualizar(l);
                 return -2;
@@ -271,7 +271,7 @@ public class ServicioLibrosImpl implements ServicioLibros {
             //Desasignamos el libros a los revisores que tenia
             desasignarRevisores(l);
             //Borramos los revisores del libro
-            l.getRevisoresAsignados().clear();
+//            l.getRevisoresAsignados().clear();
             //Actualiza en BD
             l.setEstado("publicado");
             libDAO.actualizar(l);

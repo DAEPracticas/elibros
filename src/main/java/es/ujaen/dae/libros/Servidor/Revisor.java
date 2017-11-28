@@ -53,21 +53,23 @@ public class Revisor {
     /* @OneToMany
     private List<Libro> librosPendientes;
      */
-    @OneToMany(fetch = FetchType.EAGER)
+    
+    /*@ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "Revisor_Libro",
             joinColumns = @JoinColumn(name = "revisor_token"),
             inverseJoinColumns = @JoinColumn(name = "libro_isbn")
-    )
+    )*/
+    @ManyToMany
     private List<Libro> librosPendientes;
 
-    @OneToMany(fetch = FetchType.EAGER)
+   /* @OneToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "Revisor_Libro_Historico",
             joinColumns = @JoinColumn(name = "revisor_token"),
             inverseJoinColumns = @JoinColumn(name = "libro_isbn")
     )
-    private List<Libro> historicoLibros;
+    private List<Libro> historicoLibros;*/
 
     public Revisor() {
         nombre = "";
@@ -76,7 +78,7 @@ public class Revisor {
         token = ""; //se asigna despues de ejecutar generarToken()
         carga = 0;
         librosPendientes = new ArrayList<>();
-        historicoLibros = new ArrayList<>();
+       // historicoLibros = new ArrayList<>();
     }
 
     public Revisor(String _nom, String _nick, String _pass, int _carga) {
@@ -86,7 +88,7 @@ public class Revisor {
         carga = _carga;
         token = ""; //se asigna despues de ejecutar generarToken()
         librosPendientes = new ArrayList<>();
-        historicoLibros = new ArrayList<>();
+       // historicoLibros = new ArrayList<>();
 
     }
 
@@ -102,13 +104,13 @@ public class Revisor {
         this.librosPendientes = librosPendientes;
     }
 
-    public List<Libro> getHistoricoLibros() {
+   /* public List<Libro> getHistoricoLibros() {
         return historicoLibros;
     }
 
     public void setHistoricoLibros(ArrayList<Libro> historicoLibros) {
         this.historicoLibros = historicoLibros;
-    }
+    }*/
 
     public String getNombre() {
         return nombre;

@@ -42,13 +42,15 @@ public class Libro {
     //private Autor escritoPor;
     /*
     private ArrayList<Integer> notas;*/
-    @OneToMany(fetch = FetchType.EAGER)
-    @JoinTable(
-            name = "Libro_Revisor",
-            joinColumns = @JoinColumn(name = "libro_isbn"),
-            inverseJoinColumns = @JoinColumn(name = "revisor_token")
-    )
-    private List<Revisor> revisoresAsignados;
+//    @OneToMany(fetch = FetchType.EAGER)
+//    @JoinTable(
+//            name = "Libro_Revisor",
+//            joinColumns = @JoinColumn(name = "libro_isbn"),
+//            inverseJoinColumns = @JoinColumn(name = "revisor_token")
+//    )
+//    
+    
+    //private List<Revisor> revisoresAsignados;
 
     public Libro() {
         isbn = "";
@@ -59,7 +61,7 @@ public class Libro {
         estado = "revisionContenido";
         texto = "";
         //notas = new ArrayList<>();
-        revisoresAsignados = new ArrayList<>();
+//        revisoresAsignados = new ArrayList<>();
         nota1 = -1;
         nota2 = -1;
         nota3 = -1;
@@ -73,7 +75,7 @@ public class Libro {
         estado = _estado;
         texto = _texto;
         //notas = new ArrayList<>();
-        revisoresAsignados = new ArrayList<>();
+//        revisoresAsignados = new ArrayList<>();
         nota1 = -1;
         nota2 = -1;
         nota3 = -1;
@@ -175,15 +177,15 @@ public class Libro {
 //        this.escritoPor = escritoPor;
 //    }
 
-    public List<Revisor> getRevisoresAsignados() {
-        return revisoresAsignados;
-    }
-
-    public void setRevisoresAsignados(ArrayList<Revisor> revisoresAsignados) {
-        this.revisoresAsignados = revisoresAsignados;
-    }
-
-    public void agregarRevisor(Revisor r) {
-        revisoresAsignados.add(r);
-    }
+//    public List<Revisor> getRevisoresAsignados() {
+//        return revisoresAsignados;
+//    }
+//
+//    public void setRevisoresAsignados(ArrayList<Revisor> revisoresAsignados) {
+//        this.revisoresAsignados = revisoresAsignados;
+//    }
+//
+//    public void agregarRevisor(Revisor r) {
+//        revisoresAsignados.add(r);
+//    }
 }

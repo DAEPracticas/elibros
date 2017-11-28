@@ -401,7 +401,7 @@ public class ClienteLibros {
 
     public void run() {
        
-        /*
+        
         ServicioLibros servicios = context.getBean(ServicioLibros.class);
         servicios.rellenarColaRevisores();
 
@@ -590,6 +590,6 @@ public class ClienteLibros {
                 System.out.println("Alerta, debe insertar un número");
                 sn.next();
             }
-        }*/
+        }
     }
 }
