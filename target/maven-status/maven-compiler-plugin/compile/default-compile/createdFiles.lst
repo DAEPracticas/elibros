@@ -3,12 +3,14 @@ es/ujaen/dae/libros/Servidor/Libro.class
 es/ujaen/dae/libros/excepciones/ErrorEliminarUsuario.class
 es/ujaen/dae/libros/excepciones/ErrorNuevoRevisor.class
 es/ujaen/dae/libros/Servidor/ServicioLibrosImpl.class
+es/ujaen/dae/libros/dtos/AutorDTO.class
 es/ujaen/dae/libros/Servidor/Editor.class
 es/ujaen/dae/libros/Cliente/ClienteLibros.class
 es/ujaen/dae/libros/Servidor/RecursoLibros.class
 es/ujaen/dae/libros/Servidor/Revisor.class
 es/ujaen/dae/libros/excepciones/ErrorUsuarioRegistrado.class
 es/ujaen/dae/libros/Cliente/Comentarios.class
+es/ujaen/dae/libros/dtos/RevisorDTO.class
 es/ujaen/dae/libros/excepciones/ErrorNuevoLibro.class
 es/ujaen/dae/libros/Servidor/AutorDAO.class
 es/ujaen/dae/libros/excepciones/ErrorLibroNoExiste.class
@@ -16,6 +18,7 @@ es/ujaen/dae/libros/Servidor/LibroDAO.class
 com/daw/pruebadae/clinicaCliente.class
 es/ujaen/dae/libros/excepciones/ErrorLibroExistente.class
 es/ujaen/dae/libros/Cliente/ExcepcionCli.class
+es/ujaen/dae/libros/dtos/EditorDTO.class
 es/ujaen/dae/libros/excepciones/ErrorModificarLibro.class
 es/ujaen/dae/libros/Servidor/Autor.class
 es/ujaen/dae/libros/Servidor/ServicioLibros.class
@@ -23,6 +26,7 @@ es/ujaen/dae/libros/Servidor/RevisorDAO.class
 es/ujaen/dae/libros/Servidor/ServidorLibros.class
 com/daw/pruebadae/servidorClinica.class
 es/ujaen/dae/libros/excepciones/ErrorLogin.class
+es/ujaen/dae/libros/dtos/LibroDTO.class
 es/ujaen/dae/libros/excepciones/ErrorModificarRevisor.class
 com/daw/pruebadae/Clinica.class
 es/ujaen/dae/libros/excepciones/ErrorNoAutorizado.class

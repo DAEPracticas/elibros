@@ -19,9 +19,10 @@ public class ServidorLibros {
         SpringApplication sistema = new SpringApplication(ServidorLibros.class);
         ApplicationContext context = sistema.run(args);
         
-        ClienteLibros clienteLibros = new ClienteLibros(context);
+        /*ClienteLibros clienteLibros = new ClienteLibros(context);
         clienteLibros.run();
-        
-          //RecursoLibros rl=new RecursoLibros(context);
+        */
+        RecursoLibros rl=new RecursoLibros(context);
+      
     }
 }

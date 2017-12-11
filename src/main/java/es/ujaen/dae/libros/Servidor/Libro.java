@@ -25,6 +25,7 @@ import org.hibernate.annotations.Proxy;
 @Entity
 public class Libro {
 
+  
     @Id
     private String isbn;
     private String tematica;
@@ -102,8 +103,8 @@ public class Libro {
      */
     public Integer checkNotaFinal() {
         Integer aux = 0;
-        if (nota1 != -1 && nota2 != -1 && nota3 != -1) {
-            aux = nota1 + nota2 + nota3;
+        if (getNota1() != -1 && getNota2() != -1 && getNota3() != -1) {
+            aux = getNota1() + getNota2() + getNota3();
             if (aux < 10) {
                 setEstado("noPublicable");
                 return -2;
@@ -168,6 +169,48 @@ public class Libro {
     public void setTexto(String texto) {
         this.texto = texto;
     }
+      /**
+     * @return the nota1
+     */
+    public int getNota1() {
+        return nota1;
+    }
+
+    /**
+     * @param nota1 the nota1 to set
+     */
+    public void setNota1(int nota1) {
+        this.nota1 = nota1;
+    }
+
+    /**
+     * @return the nota2
+     */
+    public int getNota2() {
+        return nota2;
+    }
+
+    /**
+     * @param nota2 the nota2 to set
+     */
+    public void setNota2(int nota2) {
+        this.nota2 = nota2;
+    }
+
+    /**
+     * @return the nota3
+     */
+    public int getNota3() {
+        return nota3;
+    }
+
+    /**
+     * @param nota3 the nota3 to set
+     */
+    public void setNota3(int nota3) {
+        this.nota3 = nota3;
+    }
+
 //
 //    public Autor getEscritoPor() {
 //        return escritoPor;
