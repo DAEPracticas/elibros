@@ -75,7 +75,7 @@ public class RecursoLibros {
     }
 
     
-    @RequestMapping("hola")
+    @RequestMapping("/autor/hola")
     public String saludo() {
         return "ELIBROS le manda un saludo";
     }
