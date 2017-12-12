@@ -575,17 +575,15 @@ public class ServicioLibrosImpl implements ServicioLibros {
         //String token1 = generarToken("Revisor");
         r2.setToken("345234652345jt6n245-R");
         revDAO.insertar(r2);
-        
+
         Revisor r5 = new Revisor("pepito revisor", "pepito", "1234", 4);
         r5.setToken("asd98a7sd9a-R");
         revDAO.insertar(r5);
-        
-        
+
         Revisor r6 = new Revisor("tony revisor", "tony", "1234", 4);
         r6.setToken("ds8dx25s-R");
         revDAO.insertar(r6);
-        
-        
+
         Revisor r7 = new Revisor("laura revisor", "laura", "1234", 4);
         r7.setToken("d8fr2c8esw56s-R");
         revDAO.insertar(r7);
@@ -609,7 +607,7 @@ public class ServicioLibrosImpl implements ServicioLibros {
                 "23/2/2013", "revisionContenido", "Texto vacío");
         Libro l3 = new Libro("978-43", "Aventuras", "Libro3",
                 "23/2/2013", "revisionContenido", "Texto vacío");
-      
+
         Libro l5 = new Libro("978-22", "Aventuras", "Libro5",
                 "23/2/2013", "revisionContenido", "Texto vacío");
         Libro l6 = new Libro("978-84998423299619", "Aventuras", "Libro6",
@@ -620,7 +618,7 @@ public class ServicioLibrosImpl implements ServicioLibros {
         libDAO.insertar(l1);
         libDAO.insertar(l2);
         libDAO.insertar(l3);
-     
+
         libDAO.insertar(l5);
         libDAO.insertar(l6);
         libDAO.insertar(l7);
@@ -636,7 +634,6 @@ public class ServicioLibrosImpl implements ServicioLibros {
 //        r3.asignarLibro(l5);
 //        r3.asignarLibro(l7);
 //        r4.asignarLibro(l6);
-
 //        Libro l8 = new Libro("43243241", "Terror", "Dracula",
 //                "23/2/1967", "revisionContenido", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, "
 //                + "sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
@@ -665,4 +662,25 @@ public class ServicioLibrosImpl implements ServicioLibros {
 
     }
 
+    @Override
+    public Autor loginAutor(String nick) {
+
+            Autor aut = null;
+            aut = autDAO.buscarPorNick(nick);
+           return aut;
+    }
+    @Override
+    public Editor loginEditor(String nick) {
+
+            Editor edit = null;
+            edit = editDAO.buscarPorNick(nick);
+           return edit;
+    }
+    @Override
+    public Revisor loginRevisor(String nick) {
+
+            Revisor rev = null;
+            rev = revDAO.buscarPorNick(nick);
+           return rev;
+    }
 }

@@ -22,6 +22,7 @@
 /Users/josejimenezdelapaz/Documents/elibros/src/main/java/com/daw/pruebadae/servidorClinica.java
 /Users/josejimenezdelapaz/Documents/elibros/src/main/java/es/ujaen/dae/libros/Servidor/EditorDAO.java
 /Users/josejimenezdelapaz/Documents/elibros/src/main/java/es/ujaen/dae/libros/Servidor/RevisorDAO.java
+/Users/josejimenezdelapaz/Documents/elibros/src/main/java/es/ujaen/dae/libros/Servidor/ServicioDatosUsuarioLibros.java
 /Users/josejimenezdelapaz/Documents/elibros/src/main/java/es/ujaen/dae/libros/Servidor/ServicioLibrosImpl.java
 /Users/josejimenezdelapaz/Documents/elibros/src/main/java/es/ujaen/dae/libros/Cliente/Comentarios.java
 /Users/josejimenezdelapaz/Documents/elibros/src/main/java/es/ujaen/dae/libros/excepciones/ErrorEliminarUsuario.java

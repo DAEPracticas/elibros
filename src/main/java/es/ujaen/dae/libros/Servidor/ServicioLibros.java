@@ -44,4 +44,9 @@ public interface ServicioLibros {
     // public Map<String, Revisor> getRevisores();
     public void rellenarColaRevisores() ;
     public void holaBuscaToken(String tok);
+    
+    //Login SPRING SECURITY
+    public Autor loginAutor(String nick);
+     public Editor loginEditor(String nick);
+      public Revisor loginRevisor(String nick);
 }
